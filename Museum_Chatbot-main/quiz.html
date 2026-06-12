@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Art and Culture Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .quiz-container {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+
+    .quiz-question h3 {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Indian Art and Culture Quiz</h1>
+  <div class="quiz-container">
+    <form id="quiz-form">
+      <div class="quiz-question" data-key="q1">
+        <h3>1. The Ajanta caves are famous for which type of art?</h3>
+        <input type="radio" name="q1" value="a"> Sculpture<br>
+        <input type="radio" name="q1" value="b"> Murals<br>
+        <input type="radio" name="q1" value="c"> Calligraphy<br>
+      </div>
+      <div class="quiz-question" data-key="q2">
+        <h3>2. Which state is famous for Madhubani paintings?</h3>
+        <input type="radio" name="q2" value="a"> Bihar<br>
+        <input type="radio" name="q2" value="b"> Rajasthan<br>
+        <input type="radio" name="q2" value="c"> Gujarat<br>
+      </div>
+      <div class="quiz-question" data-key="q3">
+        <h3>3. Who painted the famous artwork “Shakuntala”?</h3>
+        <input type="radio" name="q3" value="a"> Raja Ravi Varma<br>
+        <input type="radio" name="q3" value="b"> Rabindranath Tagore<br>
+        <input type="radio" name="q3" value="c"> Jamini Roy<br>
+      </div>
+      <div class="quiz-question" data-key="q4">
+        <h3>4. What material was predominantly used in the Harappan seals?</h3>
+        <input type="radio" name="q4" value="a"> Bronze<br>
+        <input type="radio" name="q4" value="b"> Terracotta<br>
+        <input type="radio" name="q4" value="c"> Steatite<br>
+      </div>
+      <div class="quiz-question" data-key="q5">
+        <h3>5. The Sun Temple at Konark is shaped like which object?</h3>
+        <input type="radio" name="q5" value="a"> A lotus<br>
+        <input type="radio" name="q5" value="b"> A chariot<br>
+        <input type="radio" name="q5" value="c"> A pyramid<br>
+      </div>
+      <div class="quiz-question" data-key="q6">
+        <h3>6. In which museum is the Dancing Girl of Mohenjo-Daro displayed?</h3>
+        <input type="radio" name="q6" value="a"> Indian Museum, Kolkata<br>
+        <input type="radio" name="q6" value="b"> National Museum, New Delhi<br>
+        <input type="radio" name="q6" value="c"> Prince of Wales Museum, Mumbai<br>
+      </div>
+      <div class="quiz-question" data-key="q7">
+        <h3>7. Warli paintings are traditionally created by which tribe?</h3>
+        <input type="radio" name="q7" value="a"> Bhil<br>
+        <input type="radio" name="q7" value="b"> Warli<br>
+        <input type="radio" name="q7" value="c"> Santhal<br>
+      </div>
+      <div class="quiz-question" data-key="q8">
+        <h3>8. The Khajuraho temples are known for their depiction of which theme?</h3>
+        <input type="radio" name="q8" value="a"> Devotional music<br>
+        <input type="radio" name="q8" value="b"> Erotic sculptures<br>
+        <input type="radio" name="q8" value="c"> Mythological epics<br>
+      </div>
+      <div class="quiz-question" data-key="q9">
+        <h3>9. What is the name of the largest handwoven carpet in the world, displayed in India?</h3>
+        <input type="radio" name="q9" value="a"> Kashmiri Carpet<br>
+        <input type="radio" name="q9" value="b"> Persian Rug<br>
+        <input type="radio" name="q9" value="c"> Maharaja Carpet<br>
+      </div>
+      <div class="quiz-question" data-key="q10">
+        <h3>10. Pattachitra paintings originated in which state?</h3>
+        <input type="radio" name="q10" value="a"> Odisha<br>
+        <input type="radio" name="q10" value="b"> West Bengal<br>
+        <input type="radio" name="q10" value="c"> Kerala<br>
+      </div>
+
+      <button type="button" id="submit-btn">Submit</button>
+    </form>
+  </div>
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Virtual Tour</title>
+    <style>
+        /* style.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 24px;
+    z-index: 10;
+}
+
+#start-tour {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    </style>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+    <div id="overlay">
+        <button id="start-tour">Start Virtual Tour</button>
+    </div>
+
+    <div id="scene-container" style="display: none;">
+        <a-scene>
+            <a-sky src="image.png" rotation="0 -130 0"></a-sky>
+            </a-entity>
+            <a-camera></a-camera>
+        </a-scene>
+    </div>
+
+    <script>
+        // script.js
+
+// Wait for the DOM to fully load
+document.addEventListener("DOMContentLoaded", () => {
+    // References to the DOM elements
+    const overlay = document.getElementById("overlay");
+    const startTourButton = document.getElementById("start-tour");
+    const sceneContainer = document.getElementById("scene-container");
+
+    // Check if the startTourButton is found
+    if (!startTourButton) {
+        console.error("Start Tour button not found");
+        return;
+    }
+
+    // Show the tour on button click
+    startTourButton.addEventListener("click", () => {
+        console.log("Start Tour button clicked!"); // Debugging line
+        overlay.style.display = "none"; // Hide the overlay
+        sceneContainer.style.display = "block"; // Show the 3D scene container
+    });
+});
+
+    </script>
+</body>
+</html>

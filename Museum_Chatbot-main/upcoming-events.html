@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style>
+        /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Event container styles */
+.event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Event card styles */
+.event {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.event:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event h2 {
+    font-size: 20px;
+    color: #555;
+}
+
+.event p {
+    color: #777;
+}
+
+/* Booking button styles */
+.book-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.book-button:hover {
+    background-color: #218838;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+    <title>Upcoming Events</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="virtual_tour.html">Virtual Tour</a></li>
+            <li><a href="upcoming_events.html">Upcoming Events</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+        </ul>
+    </nav>
+
+    <h1>Upcoming Events</h1>
+
+    <div class="events-list">
+        <div class="event">
+            <h2>Hidden Histories</h2>
+            <p>Date: December 10, 2024</p>
+            <p>Unearthed Artifacts</p>
+        </div>
+        <div class="event">
+            <h2>Portraits of a Nation</h2>
+            <p>Date: December 15, 2024</p>
+            <p>Celebrating Diversity Through Art</p>
+            
+        </div>
+        <div class="event">
+            <h2>Art in Motion</h2>
+            <p>Date: December 20, 2024</p>
+            <p>Storytelling Through Dance</p>
+        </div>
+    </div>
+
+   <script>
+
+// Call initialize function on page load
+document.addEventListener("DOMContentLoaded", initialize);
+
+    </script>
+</body>
+</html>

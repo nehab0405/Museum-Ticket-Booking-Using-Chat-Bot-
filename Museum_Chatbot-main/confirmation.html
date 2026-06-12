@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", sans-serif;
+            background-color: #121212; /* Dark theme */
+            color: #f4f4f4; /* Light text for contrast */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Container styling */
+        .confirmation-container {
+            text-align: center;
+            background-color: white; /* Slightly lighter dark shade */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+            width: 90%;
+            max-width: 500px; /* Responsive layout */
+        }
+
+        /* Headings */
+        h1 {
+            font-size: 2rem;
+            color: blue; /* Bright green for success */
+            margin-bottom: 20px;
+        }
+
+        /* Text styling */
+        p {
+            margin: 10px 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color:black;
+        }
+
+        /* Button styling */
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: blue;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 255, 136, 0.3); /* Glow effect */
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background-color: #00cc6e;
+            box-shadow: 0px 4px 15px rgba(0, 255, 136, 0.6); /* Stronger glow on hover */
+        }
+
+        /* Animation for confirmation message */
+        .confirmation-container h1 {
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 8px #00ff88, 0 0 16px #00ff88;
+            }
+            100% {
+                text-shadow: 0 0 16px #00ff88, 0 0 32px #00ff88;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Booking Confirmed!</h1>
+        <p>Thank you for booking with us. Your payment has been successfully completed.</p>
+        <a href="/">Go Back to Home</a>
+    </div>
+</body>
+</html>

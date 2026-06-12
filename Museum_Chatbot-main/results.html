@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .result {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .correct {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .incorrect {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz Results</h1>
+  <div id="results-container"></div>
+  <button onclick="retakeQuiz()">Retake Quiz</button>
+
+  <script>
+    // Parse the URL query parameters
+    const params = new URLSearchParams(window.location.search);
+    const encodedData = params.get("data");
+    const total = params.get("total");
+    const userResponses = JSON.parse(decodeURIComponent(encodedData));
+
+    const resultsContainer = document.getElementById("results-container");
+
+    let correctCount = 0;
+    userResponses.forEach((response, index) => {
+      const div = document.createElement("div");
+      div.className = "result " + (response.isCorrect ? "correct" : "incorrect");
+      div.innerHTML = `
+        <strong>Question ${index + 1}:</strong><br>
+        Correct Answer: ${response.correctAnswer}<br>
+        Your Answer: ${response.userAnswer ? response.userAnswer : "No Answer"}
+      `;
+      resultsContainer.appendChild(div);
+
+      if (response.isCorrect) correctCount++;
+    });
+
+    // Display total score
+    const scoreDiv = document.createElement("div");
+    scoreDiv.className = "result";
+    scoreDiv.innerHTML = `<strong>Your Score: ${correctCount}/${total}</strong>`;
+    resultsContainer.appendChild(scoreDiv);
+
+    // Retake Quiz Button
+    function retakeQuiz() {
+      window.location.href = "quiz.html";
+    }
+  </script>
+</body>
+</html>
